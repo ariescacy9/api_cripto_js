@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>cryptocompare</title>
+</head>
+<body>
+  <div class="container">
+    <div class="container__box">
+      <h1 class="container__box--tittle">Cotizador de Criptomonedas</h1>
+      <div class="container__box--search">
+        <select id="money">
+          <option disabled selected >Elije tu moneda</option>
+          <option value="USD">Dolares</option>
+          <option value="EUR">Euros</option>
+          <option value="GBP">Libras</option>
+          <option value="PEN">Soles</option>
+        </select>
+        <select id="crytomoney">
+          <option disabled selected >Elije tu Criptomoneda</option>
+          <option value="BTC">Bitcoin</option>
+          <option value="ETH">Ethereum</option>
+          <option value="USDT">Tether</option>
+          <option value="USDC">USD Coin</option>
+          <option value="BNB">Binance Coin</option>
+          <option value="XRP">XRP</option>
+          <option value="SOL">Solana</option>
+          <option value="BUSD">BUSD</option>
+          <option value="ADA">Cardano</option>
+          <option value="DOGE">Dogecoin</option>
+        </select>
+        <button id="btn">Cotizar</button>
+      </div>
+      <div class="container__box--result" id="container__box--result">
+        <div class="loading"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
+
+<img src="" alt="">
