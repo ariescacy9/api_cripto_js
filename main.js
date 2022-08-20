@@ -6,14 +6,11 @@ const c = console.log;
 
 function cargar(){
   let cargando = `<div class="loading" id="loading"></div>`
-  document.getElementById("loading");
   document.getElementById("container__box--result").innerHTML = cargando
   setTimeout(()=>{
     cotizacion(valorMoney, valorCryptomoney)
   }, 3000);
 }
-
-
 
 $button.addEventListener("click", (e) => {
   e.preventDefault()
