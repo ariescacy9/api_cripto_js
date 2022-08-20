@@ -80,7 +80,12 @@ p {
   height: 80px;
 }
 
-.loading:after {
+.cerrarloading {
+  transform: translateY(100%);
+  transition: ease 0.5s;
+}
+
+.loading::after {
   content: " ";
   display: block;
   width: 64px;

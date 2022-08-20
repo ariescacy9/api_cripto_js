@@ -1,20 +1,32 @@
-let key = "5d28bd1a161626885b22c01c76553f70f06ea39dbd7642da8f9feb743788acf1"
+let key = "5d28bd1a161626885b22c01c76553f70f06ea39dbd7642da8f9feb743788acf10032"
 let $button = document.getElementById("btn")
 let $money = document.getElementById("money")
 let $crytomoney = document.getElementById("crytomoney")
 const c = console.log;
 
+function cargar(){
+  let cargando = `<div class="loading" id="loading"></div>`
+  document.getElementById("loading");
+  document.getElementById("container__box--result").innerHTML = cargando
+  setTimeout(()=>{
+    cotizacion(valorMoney, valorCryptomoney)
+  }, 3000);
+}
+
+
+
 $button.addEventListener("click", (e) => {
   e.preventDefault()
   const valorMoney = $money.value
   const valorCryptomoney = $crytomoney.value
- 
+
   if (valorMoney === "Elije tu moneda" || valorCryptomoney === "Elije tu Criptomoneda") {
     let error = ` <p>INGRESE AMBAS MONEDAS!!!</p>
                   <img src="https://c8.alamy.com/compes/rr1w61/viejo-millonario-de-moda-rr1w61.jpg" alt="dibujo millonario" class="error_dibujo">`;
     document.getElementById("container__box--result").innerHTML = error
   }else{
     cotizacion(valorMoney, valorCryptomoney)
+    cargar()
   }
 })
 
